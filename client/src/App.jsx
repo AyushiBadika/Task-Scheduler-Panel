@@ -8,6 +8,7 @@ function App() {
 
   // Fetch tasks from API on component mount
   useEffect(() => {
+    alert("Please use your email and paas key to test");
     fetchTasks();
   }, []);
 
