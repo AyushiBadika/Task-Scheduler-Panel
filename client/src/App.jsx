@@ -12,7 +12,7 @@ function App() {
   }, []);
 
   async function fetchTasks() {
-    await fetch("http://localhost:5000/tasks")
+    await fetch("https://task-scheduler-panel.onrender.com/tasks")
       .then((response) => response.json())
       .then((data) => setTasks(data))
       .catch((err) => console.error(err));
@@ -20,7 +20,7 @@ function App() {
 
   // Add new task to the task list
   const addTask = async (newTask) => {
-    await fetch("http://localhost:5000/add-task", {
+    await fetch("https://task-scheduler-panel.onrender.com/add-task", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTask),
